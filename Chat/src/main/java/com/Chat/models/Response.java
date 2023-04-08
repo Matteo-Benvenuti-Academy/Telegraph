@@ -9,9 +9,11 @@ public class Response {
 		setStatus(status);
 		setData(data);
 	}
+
 	public Response(String status) {
 		this(status,null);
 	}
+	
 	public String getStatus() {
 		return status;
 	}

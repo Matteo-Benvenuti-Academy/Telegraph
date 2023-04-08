@@ -2,8 +2,6 @@ package com.Chat.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseCookie;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +18,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/chat/login")
-@CrossOrigin("*")
+@CrossOrigin(origins = "http:localhost:8080",allowCredentials = "true")
 public class LoginController {
 	
 	@Autowired
@@ -31,7 +29,12 @@ public class LoginController {
 		UserDto loginUser = service.findByUsernameAndPass(user);
 		if(loginUser == null)
 			return new Response("ko");
-		
-		return new Response("ok",loginUser);
+		request.getSession().setAttribute("logUser", loginUser);
+
+		Cookie usernameCookie = new Cookie("usernameCookie", loginUser.getUsername());
+		usernameCookie.setPath("/");
+		response.addCookie(usernameCookie);
+
+		return new Response("ok");
 	}
 }

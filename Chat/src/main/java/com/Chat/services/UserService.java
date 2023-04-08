@@ -10,8 +10,6 @@ import com.Chat.dto.UserDto;
 import com.Chat.models.User;
 import com.Chat.repositories.UserRepository;
 
-import jakarta.servlet.http.HttpServletRequest;
-
 @Service
 public class UserService {
 	
