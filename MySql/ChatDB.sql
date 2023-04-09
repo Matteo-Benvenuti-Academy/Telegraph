@@ -7,6 +7,7 @@ CREATE TABLE chat_user(
 	username VARCHAR(250) UNIQUE NOT NULL,
 	pass VARCHAR(250) NOT NULL,
 	email VARCHAR(250) UNIQUE NOT NULL,
+	svg VARCHAR(500) NOT NULL,
     removed BOOLEAN NOT NULL DEFAULT FALSE
 );
 
@@ -38,8 +39,8 @@ CREATE TABLE chat_message(
 );
 
 INSERT INTO chat_user(username, pass,email) VALUES
-('Matteo','1234','pippo@gmail.com'),
-('Valerione','1234','ancheio@gmail.com');
+('Matteo','1234','matben32@gmail.com'),
+('Valerione','1234','valerio@gmail.com');
 
 INSERT INTO chat_room(roomName, uniquecode,roomdescription) VALUES
 ('Stanza1','STA1',"Descrizione 1"),
@@ -54,3 +55,4 @@ INSERT INTO chat_message(sendtime,messagetext,userRIF,roomRIF) VALUES
 (CURRENT_TIME(),"Ciao STANZA1!",1,1),
 (CURRENT_TIME(),"Ciao STANZA2!",2,2);
 
+SELECT * FROM chat_user;

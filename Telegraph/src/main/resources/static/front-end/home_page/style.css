@@ -1,0 +1,75 @@
+.navbar-dark{
+   background-color: #161b22 !important;
+}
+
+.navbar-left-margin{
+    margin-left: 2%;
+}
+
+.navbar-right-margin{
+    margin-right: 2%;
+}
+
+.profilePic{
+    background-color: white;
+    border-radius: 50% !important;
+}
+
+.profilePic-preview{
+    width: 30px;
+    height: 30px;
+}
+
+.avatar{
+    margin-top: 15%;
+    width: 250px;
+    height: 250px;
+}
+
+.refresh-icon{
+    display: none;
+    color: white;
+    font-size: 3rem !important;
+    position: absolute;
+    right: 24%;
+    top: 37%;
+}
+
+.swal2-confirm{
+    background-color: rgb(29, 100, 222) !important;
+}
+
+.text{
+    text-align: start;
+    font-size: 1.5rem !important;
+}
+
+.title{
+    font-size: 3.8rem !important;
+    margin-bottom: 30px;
+}
+
+.swal-height {
+    height: 80%;
+}
+
+.information-title{
+    font-weight: bold;
+}
+
+.information-data{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.actions{
+    width: 90%;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.spaced-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
